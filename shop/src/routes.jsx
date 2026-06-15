@@ -8,7 +8,7 @@ export default function Routes() {
         <Routes>
           {/* Route par défaut pour le catalogue */}
           <Route path='/' element = {<Catalogue/>}></Route>
-          {/* Route par défaut pour le detail d'un produit */}
+          {/* Route pour le detail d'un produit */}
           <Route path='/detail/:id'></Route>
         </Routes>
     </BrowserRouter>
