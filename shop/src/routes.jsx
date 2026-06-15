@@ -1,12 +1,14 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
-
+import Catalogue from './components/catalogue'
 
 export default function Routes() {
   return (
     <BrowserRouter>
         <Routes>
-          <Route path='/'></Route>
+          {/* Route par défaut pour le catalogue */}
+          <Route path='/' element = {<Catalogue/>}></Route>
+          {/* Route par défaut pour le detail d'un produit */}
           <Route path='/detail/:id'></Route>
         </Routes>
     </BrowserRouter>
