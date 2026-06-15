@@ -1,6 +1,7 @@
 import React from 'react'
 import { mockProduits } from '../data'
 import { useEffect, useState } from 'react'
+import ProduitComponent from './ProduitComponent'
 
 export default function Catalogue() {
   // Création de l'état de la liste des produits + initialisatin du state 
@@ -12,8 +13,27 @@ export default function Catalogue() {
   
   return (
     <>
-      <h1>JuiceLoc</h1>
-      <div>{listeProduits.map((produit)=> <h1>{produit.titre}</h1> )} </div>
+      <table className="table" style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
+        <thead>
+          <tr style={{ backgroundColor: '#f5f5f5', textAlign: 'left' }}>
+            <th scope="col">Produit</th>
+            <th scope="col">Prix</th>
+            <th scope="col">Stock</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          {listeProduits.map((produit) => (
+            <ProduitComponent 
+              key={produit.id} 
+              titre={produit.titre} 
+              prix={produit.prix} 
+              stock={produit.stock} 
+              image={produit.image} 
+            />
+          ))}
+        </tbody>
+      </table>
     </>
   )
 }
