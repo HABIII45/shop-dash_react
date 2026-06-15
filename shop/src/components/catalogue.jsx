@@ -7,9 +7,13 @@ export default function Catalogue() {
   const [listeProduits, setListeProduits] = useState([])
   
 
+  //Charger une fois le mock
   useEffect(()=>{setListeProduits(mockProduits)}, [])
   
   return (
-    <div></div>
+    <>
+      <h1>JuiceLoc</h1>
+      <div>{listeProduits.map((produit)=> <h1>{produit.titre}</h1> )} </div>
+    </>
   )
 }
