@@ -10,6 +10,7 @@ export default function ProduitComponent(props) {
       </td>
       <td>{props.prix} FCFA</td>
       <td>{props.stock}</td>
+      <td><button onClick={() => props.onClickProp(props.id)}>X</button></td>
       <td><Link to={`/detail/${props.id}`}>Voir plus</Link></td>
     </tr>
     </>

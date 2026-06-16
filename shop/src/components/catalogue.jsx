@@ -12,6 +12,12 @@ export default function Catalogue() {
   //Charger une fois le mock
   useEffect(()=>{setListeProduits(mockProduits)}, [])
   
+
+  // Suppression d'un produit dans le catalogue
+  const supprimerProduit = (id) => {
+    setListeProduits(listeProduits.filter(produit =>produit.id !== id)) ;
+  }
+
   return (
     <>
       <table className="table" style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
@@ -20,6 +26,7 @@ export default function Catalogue() {
             <th scope="col">Produit</th>
             <th scope="col">Prix</th>
             <th scope="col">Stock</th>
+            <th scope="col">Actions</th>
             
           </tr>
         </thead>
@@ -33,7 +40,7 @@ export default function Catalogue() {
               prix={produit.prix} 
               stock={produit.stock} 
               image={produit.image} 
-              
+              onClickProp={supprimerProduit}
             />
           ))}
         </tbody>
