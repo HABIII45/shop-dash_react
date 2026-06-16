@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import Catalogue from './components/catalogue'
+import Details from './components/Details'
 
 export default function Routes() {
   return (

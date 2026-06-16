@@ -10,6 +10,8 @@ export default function Catalogue() {
   useEffect(()=>{setListeProduits(mockProduits)}, [])
   
   return (
-    <div></div>
+    <div>
+   
+      </div>
   )
 }
