@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 export default function ProduitComponent(props) {
   return (
     <>
@@ -10,6 +10,7 @@ export default function ProduitComponent(props) {
       </td>
       <td>{props.prix} FCFA</td>
       <td>{props.stock}</td>
+      <td><Link to={`/detail/${props.id}`}>Voir plus</Link></td>
     </tr>
     </>
   )
