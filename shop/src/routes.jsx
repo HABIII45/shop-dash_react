@@ -11,7 +11,7 @@ export default function RoutesApp() {
           {/* Route par défaut pour le catalogue */}
           <Route path='/' element = {<Catalogue/>}></Route>
           {/* Route pour le detail d'un produit */}
-         <Route path='/detail/:id' element = {<Details/>}></Route> 
+         <Route path='/detail/:id' element = {<Details />}></Route> 
         </Routes>
     </BrowserRouter>
   )

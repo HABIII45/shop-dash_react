@@ -1,7 +1,7 @@
 import { useParams,Link} from "react-router-dom";
 import { mockProduits } from "../data";
 
-export function Details(){
+export function Details(props){
     const {id} =useParams();
     const produit = mockProduits.find((prod) => prod.id === Number(id))
     return(
