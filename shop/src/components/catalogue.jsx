@@ -41,7 +41,7 @@ export default function Catalogue() {
           <tr style={{ backgroundColor: '#f5f5f5', textAlign: 'left' }}>
             <th scope="col">Produits</th>
             <th scope="col">Prix</th>
-            <th scope="col">Stock</th>
+            <th scope="col">Stock :Stock</th>
             
           </tr>
         </thead>

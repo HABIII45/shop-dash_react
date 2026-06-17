@@ -36,11 +36,11 @@ export function Formulaire({ajout}){
         <form className="product-form" onSubmit={handleSubmit}>
             
             <input type="text" placeholder="Titre du produit" value={newtitre} onChange={(e)=>setNewTitre(e.target.value)}/>
-             <label>Description du produit</label>
+             
             <textarea value={newdescription} placeholder= "Donnez une description" rows={5} cols={30} onChange={(e)=>setNewDescription(e.target.value)}/>
                
             <input type="number" placeholder="Mettre ici le prix du produit" value={newprix} onChange={(e)=>setNewPrix(e.target.value)}/>
-            <label>Stock du produit</label>
+            
             <input type="number" placeholder="Stock" value={newstock} onChange={(e)=>setNewStock(e.target.value)}/>
             {/* saisi une URL */}
             
