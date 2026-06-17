@@ -5,9 +5,8 @@ export default function ProduitComponent(props) {
     <>
       <tr>
       <td>
-        <img src={props.image} alt={props.titre} style={{ width: '50px', height: '50px', objectFit: 'cover', borderRadius: '5px' }} />
-        {props.titre}
-      </td>
+        <img src={props.image} alt={props.titre} style={{ width: '50px', height: '50px', objectFit: 'cover', borderRadius: '5px' }} /></td>
+      <td>{props.titre}</td>
       <td>{props.prix} FCFA</td>
       <td>{props.stock}</td>
       <td><button onClick={() => props.onClickProp(props.id)}>X</button></td>

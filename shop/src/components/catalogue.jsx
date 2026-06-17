@@ -24,7 +24,9 @@ export default function Catalogue() {
     setListeProduits([])
    }
   },[]);
-
+ 
+  //state pour afficher le resultat trouvé
+  const [recherche, setRecherche] = useState({titre:""})
 
     const ajout=(produit)=>{
     
@@ -47,20 +49,25 @@ export default function Catalogue() {
   return (
     
     <>
-      <TopBar/>
+    <TopBar saisir = {setRecherche}/>
       <table className="table" style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
         <thead>
-          <tr style={{ backgroundColor: '#f5f5f5', textAlign: 'left' }}>
+          <tr style={{ backgroundColor: '#f5f5f5', textAlign: 'rigth' }}>
             <th scope="col">Produits</th>
             <th scope="col">Prix</th>
+
             <th scope="col">Stock</th>
+
+            
             <th scope="col">Actions</th>
+
             
           </tr>
         </thead>
         
         <tbody>
-          {listeProduits.map((produit) => (
+          {listeProduits.filter((produit) => produit.titre.toLowerCase().includes(recherche.titre.toLowerCase()))
+          .map((produit) => (
             <ProduitComponent 
               key={produit.id} 
               id={produit.id}
