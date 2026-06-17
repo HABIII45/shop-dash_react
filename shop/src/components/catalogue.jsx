@@ -8,6 +8,7 @@ import TopBar from './topbar'
 export default function Catalogue() {
   // Création de l'état de la liste des produits + initialisatin du state 
   const [listeProduits, setListeProduits] = useState([])
+
   //copie du state + modification
 
 
@@ -42,10 +43,7 @@ export default function Catalogue() {
 
   setListeProduits(nouvelleListe);
 
-  localStorage.setItem(
-    "produits",
-    JSON.stringify(nouvelleListe)
-  );
+  localStorage.setItem("produits", JSON.stringify(nouvelleListe));
 };
 
   return (
