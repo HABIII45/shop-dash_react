@@ -1,9 +1,9 @@
 import { useParams,Link} from "react-router-dom";
-import { mockProduits } from "../data";
+import { donneesLocales } from "../data";
 
 export function Details(props){
     const {id} =useParams();
-    const produit = mockProduits.find((prod) => prod.id === Number(id))
+    const produit = donneesLocales.find((prod) => prod.id === Number(id))
     return(
         <>
         <img src={produit.image} alt="image" />
