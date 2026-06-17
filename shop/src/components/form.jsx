@@ -48,6 +48,7 @@ export function Formulaire({ajout}){
             {/* Affiche l’image correspondant à cette URL */}
             {/* <img src={newimage} alt="image" width="150"/> */}
             <button>Ajouter un produit</button>
+            
         </form>
         </>
     )
