@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "./form.css"
+import { Link } from "react-router-dom"
 
 
 export function Formulaire({ ajout }) {
@@ -23,7 +24,7 @@ export function Formulaire({ ajout }) {
         let nouvellesErreurs = {};
 
         if (!titre.trim()) {
-            nouvellesErreurs.titre = "Le nom ne peut pas etre vide";
+            nouvellesErreurs.titre = "Le titre ne peut pas etre vide";
         }
 
         if (!description.trim()) {
@@ -66,8 +67,9 @@ export function Formulaire({ ajout }) {
     }
 
     return (
-        <>
-            <h1>Ajout d'un produit</h1>
+        <div className="d-flex flex-column justify-content-center align-items-center">
+            <h1>Ajout d'un produit</h1> 
+            <Link to = "/"><i class="bi bi-house"></i>Retour au catalogue</Link>
             <form className="product-form" onSubmit={handleSubmit} noValidate>
                 
                 <label>Titre du produit</label>
@@ -79,7 +81,7 @@ export function Formulaire({ ajout }) {
                 {erreurs.description && <span style={{ color: 'red' }}>{erreurs.description}</span>}
                    
                 <label>Prix du produit</label>
-                <input type="number" name="prix" step="0.01" placeholder="Mettre ici le prix du produit" />
+                <input type="number" name="prix" placeholder="Mettre ici le prix du produit" />
                 {erreurs.prix && <span style={{ color: 'red' }}>{erreurs.prix}</span>}
                 
                 <label>Stock du produit</label>
@@ -89,9 +91,9 @@ export function Formulaire({ ajout }) {
                 <label>Image du produit</label>
                 <input type="text" name="image" placeholder="Url de l'image" />
                 
-                <button type="submit">Ajouter un produit</button>
+                <button type="submit" >Ajouter un produit</button>
             </form>
-        </>
+        </div>
     )
 }
 
