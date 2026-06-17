@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import Catalogue from './components/catalogue.jsx'
 import  { Details }   from './components/details.jsx'
-import { mockProduits } from './data.js'
 
 export default function RoutesApp() {
   return (

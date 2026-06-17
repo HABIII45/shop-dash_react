@@ -1,9 +1,8 @@
 import React from 'react'
-import { mockProduits } from '../data'
+import { donneesLocales } from '../data'
 import { useEffect, useState } from 'react'
 import ProduitComponent from './ProduitComponent'
 import { Formulaire } from './form'
-
 
 export default function Catalogue() {
   // Création de l'état de la liste des produits + initialisatin du state 
@@ -12,19 +11,19 @@ export default function Catalogue() {
 
 
    
-  
-
   //Charger une fois le mock
   // useEffect(()=>{setListeProduits(mockProduits)}, [])
   useEffect(()=>{
-   const data = localStorage.getItem("produits")
-   if (data){
-    setListeProduits(JSON.parse(data))
+   const donnees = donneesLocales
+   if (donnees){
+    setListeProduits(donnees)
    }
    else{
-    setListeProduits(mockProduits)
+    setListeProduits([])
    }
   },[]);
+
+
     const ajout=(produit)=>{
     
      const newproduit = ([...listeProduits, produit])
@@ -32,16 +31,34 @@ export default function Catalogue() {
      localStorage.setItem("produits",JSON.stringify(newproduit))
   }
   
+
+  // Suppression d'un produit dans le catalogue
+
+  const supprimerProduit = (id) => {
+  const nouvelleListe = listeProduits.filter(produit => produit.id !== id);
+
+  setListeProduits(nouvelleListe);
+
+  localStorage.setItem(
+    "produits",
+    JSON.stringify(nouvelleListe)
+  );
+};
+
   return (
     
     <>
-    
       <table className="table" style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
         <thead>
           <tr style={{ backgroundColor: '#f5f5f5', textAlign: 'left' }}>
             <th scope="col">Produits</th>
             <th scope="col">Prix</th>
+<<<<<<< HEAD
             <th scope="col">Stock :Stock</th>
+=======
+            
+            <th scope="col">Actions</th>
+>>>>>>> 8fdb5c96e1b9ed6bca826265735ab8f93819d87a
             
           </tr>
         </thead>
@@ -55,7 +72,7 @@ export default function Catalogue() {
               prix={produit.prix} 
               stock={produit.stock} 
               image={produit.image} 
-              
+              onClickProp={supprimerProduit}
             />
           ))}
         </tbody>
