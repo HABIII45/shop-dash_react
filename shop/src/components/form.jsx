@@ -52,3 +52,9 @@ export function Formulaire({ajout}){
         </>
     )
 }
+
+
+function validerFormulaire(){
+    const formData = FormData
+
+}
