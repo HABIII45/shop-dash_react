@@ -27,4 +27,6 @@
 
 
 
-export const donneesLocales = JSON.parse(localStorage.getItem("produits")) || [];
+export function donneesLocales(){ 
+    return JSON.parse(localStorage.getItem("produits")) || []
+}

@@ -1,11 +1,13 @@
 import { useState } from "react"
 import "./form.css"
 import { Link } from "react-router-dom"
+import { donneesLocales } from "../data"
+import { useNavigate } from "react-router-dom";
 
 
 export function Formulaire({ ajout }) {
     const [erreurs, setErreurs] = useState({})
-
+    const navigate = useNavigate()
     const handleSubmit = (event) => {
         event.preventDefault() 
 
@@ -61,8 +63,14 @@ export function Formulaire({ ajout }) {
                 image
             }
             
-            ajout(produit)
+            // ajout(produit)
+            const produits = donneesLocales()
+            const nouveauProduit = [...produits, produit]
+            localStorage.setItem("produits", JSON.stringify(nouveauProduit))
+
             form.reset() 
+           
+            navigate("/")
         }
     }
 

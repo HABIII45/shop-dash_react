@@ -19,7 +19,8 @@ export default function Catalogue() {
   //Charger une fois le mock
   // useEffect(()=>{setListeProduits(mockProduits)}, [])
   useEffect(()=>{
-   const donnees = donneesLocales
+  //  const donnees = donneesLocales
+  const donnees = donneesLocales()
    if (donnees){
     setListeProduits(donnees)
    }
