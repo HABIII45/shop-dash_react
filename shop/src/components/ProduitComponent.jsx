@@ -14,7 +14,7 @@ export default function ProduitComponent(props) {
       {/* <td><button  onClick={() => props.onClickProp(props.id)}>X</button></td>
       <td><Link to={`/detail/${props.id}`}>Voir plus</Link></td> */}
 
-      <td><button onClick={() => props.onClickProp(props.id)}><i class="bi bi-trash"></i></button><Link to={`/detail/${props.id}`} style={{textDecoration : 'none', color : "green"}}><i class="bi bi-eye"></i></Link></td>
+      <td><button onClick={() => props.onClickProp(props.id)}><i className="bi bi-trash"></i></button><Link to={`/detail/${props.id}`} style={{textDecoration : 'none', color : "green"}}><i className="bi bi-eye"></i></Link></td>
 
     </tr>
     </>

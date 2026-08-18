@@ -95,7 +95,7 @@ return (
       <TopBar saisir = {setRecherche}/>
       <div className='d-flex justify-content-between align-items-center mt-4'>
         <h1 className='mt-4'>Liste des produits</h1>
-        <Link to = "/ajout" className='btn btn-primary btn-lg'><i class="bi bi-plus"></i>Ajouter un produit</Link>
+        <Link to = "/ajout" className='btn btn-primary btn-lg'><i className="bi bi-plus"></i>Ajouter un produit</Link>
       </div>
       <table className="table " style={{  borderCollapse: 'collapse', marginTop: '20px' }}>
         <thead>

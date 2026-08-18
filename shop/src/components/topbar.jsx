@@ -32,7 +32,7 @@ export default function TopBar({saisir}) {
                    
                    setSaisi("");
                    saisir({ titre: "" });
-                   }}>Refraichir
+                   }}>Rafraichir
                 </button>
 }
                 </form>

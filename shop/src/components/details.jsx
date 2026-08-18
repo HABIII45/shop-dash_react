@@ -23,7 +23,7 @@ export function Details(props){
         <h1>{produit.titre}</h1>
         <p>{produit.description}</p>
         <small>{produit.stock}</small>
-        <Link to ="/"><i class="bi bi-house"></i></Link>
+        <Link to ="/"><i className="bi bi-house"></i></Link>
 
         </div>
     )

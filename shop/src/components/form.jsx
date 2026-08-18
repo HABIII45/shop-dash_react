@@ -77,7 +77,7 @@ export function Formulaire({ ajout }) {
     return (
         <div className="d-flex flex-column justify-content-center align-items-center">
             <h1>Ajout d'un produit</h1> 
-            <Link to = "/"><i class="bi bi-house"></i>Retour au catalogue</Link>
+            <Link to = "/"><i className="bi bi-house"></i>Retour au catalogue</Link>
             <form className="product-form" onSubmit={handleSubmit} noValidate>
                 
                 <label>Titre du produit</label>
