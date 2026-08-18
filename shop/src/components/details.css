@@ -1,0 +1,154 @@
+/* =========================================
+   PAGE DÉTAILS
+========================================= */
+
+body {
+  background: #f6f7f9;
+}
+
+/* Conteneur principal existant */
+body #root > div {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   IMAGE PRODUIT
+========================================= */
+
+body #root img {
+  border-radius: 14px !important;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.08) !important;
+
+  border: 1px solid #e9ecef;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+body #root img:hover {
+  transform: scale(1.015);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* =========================================
+   TITRE
+========================================= */
+
+body #root h1 {
+  margin: 5px 0 0;
+
+  color: #18181b;
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.6px;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+body #root p {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: #71717a;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  text-align: center;
+}
+
+/* =========================================
+   STOCK
+========================================= */
+
+body #root small {
+  padding: 7px 14px;
+
+  border-radius: 20px;
+
+  background: #ecfdf5;
+
+  color: #15803d;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+/* Petit indicateur */
+
+body #root small::before {
+  content: "";
+
+  display: inline-block;
+
+  width: 6px;
+  height: 6px;
+
+  margin-right: 7px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  vertical-align: middle;
+}
+
+/* =========================================
+   BOUTON RETOUR
+========================================= */
+
+body #root a {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #428475 !important;
+
+  text-decoration: none !important;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+body #root a:hover {
+  background: #428475;
+
+  color: #ffffff !important;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 15px rgba(66, 132, 117, 0.18);
+}
+
+body #root a i {
+  font-size: 16px;
+}

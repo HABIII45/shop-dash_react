@@ -1,4 +1,190 @@
-table  {
+/* table  {
     width: 100%;
     border-collapse: collapse;
+} */
+ /* =========================
+   TABLEAU CATALOGUE
+========================= */
+
+.table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  background: #ffffff;
+  border: 1px solid #e8ebf0;
+  border-radius: 14px;
+  overflow: hidden;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* En-tête */
+
+.table thead {
+  background: #f8f9fb;
+}
+
+.table thead tr {
+  background: #f8f9fb !important;
+}
+
+.table th {
+  padding: 16px 20px;
+
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  text-align: left !important;
+
+  border-bottom: 1px solid #e9edf2;
+}
+
+/* Corps */
+
+.table td {
+  padding: 17px 20px;
+
+  color: #374151;
+  font-size: 14px;
+
+  border-bottom: 1px solid #f0f2f5;
+
+  vertical-align: middle;
+}
+
+/* Supprime la bordure de la dernière ligne */
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Effet au survol */
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* =========================
+   BOUTON AJOUTER
+========================= */
+
+.btn.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 11px 18px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.18);
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn.btn-primary:hover {
+  background: #1d4ed8;
+  color: #ffffff;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 7px 18px rgba(37, 99, 235, 0.25);
+}
+
+.btn.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   GRAND BOUTON
+========================= */
+
+.btn.btn-primary.btn-lg {
+  padding: 12px 20px;
+  border-radius: 10px;
+
+  font-size: 14px;
+}
+
+/* =========================
+   ICÔNE +
+========================= */
+
+.btn.btn-primary i {
+  font-size: 17px;
+  line-height: 1;
+}
+
+/* =========================
+   TITRE
+========================= */
+
+h1.mt-4 {
+  margin-bottom: 0;
+
+  color: #1f2937;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  letter-spacing: -0.4px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .table th,
+  .table td {
+    padding: 14px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .table {
+    font-size: 13px;
+  }
+
+  .table th {
+    font-size: 11px;
+  }
+
+  .btn.btn-primary.btn-lg {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+
+  h1.mt-4 {
+    font-size: 23px;
+  }
 }

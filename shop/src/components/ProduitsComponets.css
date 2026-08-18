@@ -1,0 +1,224 @@
+/* =========================================
+   LIGNE PRODUIT
+========================================= */
+
+.table tbody tr {
+  height: 76px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Effet au survol */
+
+.table tbody tr:hover {
+  background: #fafbfc;
+}
+
+/* =========================================
+   CELLULES
+========================================= */
+
+.table tbody td {
+  padding: 13px 20px;
+
+  color: #3f3f46;
+  font-size: 14px;
+
+  border-bottom: 1px solid #f0f0f2;
+
+  vertical-align: middle;
+}
+
+/* =========================================
+   IMAGE PRODUIT
+========================================= */
+
+.table tbody td:first-child img {
+  width: 52px !important;
+  height: 52px !important;
+
+  object-fit: cover;
+
+  border-radius: 10px !important;
+
+  border: 1px solid #eeeeef;
+
+  background: #f7f7f8;
+
+  display: block;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.table tbody tr:hover td:first-child img {
+  transform: scale(1.04);
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+   NOM DU PRODUIT
+========================================= */
+
+.table tbody td:nth-child(2) {
+  color: #18181b;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================================
+   PRIX
+========================================= */
+
+.table tbody td:nth-child(3) {
+  color: #18181b;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+/* =========================================
+   STOCK
+========================================= */
+
+.table tbody td:nth-child(4) {
+  color: #52525b;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Badge stock */
+
+.table tbody td:nth-child(4)::before {
+  content: "";
+
+  display: inline-block;
+
+  width: 7px;
+  height: 7px;
+
+  margin-right: 7px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+}
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.table tbody td:last-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  height: 76px;
+}
+
+/* Bouton supprimer */
+
+.table tbody td:last-child button {
+  width: 34px;
+  height: 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #fff1f2;
+  color: #e11d48;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.table tbody td:last-child button:hover {
+  background: #ffe4e6;
+  color: #be123c;
+
+  transform: translateY(-1px);
+}
+
+/* Icône poubelle */
+
+.table tbody td:last-child button i {
+  font-size: 14px;
+}
+
+/* =========================================
+   LIEN VOIR
+========================================= */
+
+.table tbody td:last-child a {
+  width: 34px;
+  height: 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #eff6ff;
+
+  color: #2563eb !important;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.table tbody td:last-child a:hover {
+  background: #dbeafe;
+
+  color: #1d4ed8 !important;
+
+  transform: translateY(-1px);
+}
+
+/* Icône œil */
+
+.table tbody td:last-child a i {
+  font-size: 15px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+  .table tbody td {
+    padding: 12px 14px;
+  }
+
+  .table tbody td:first-child img {
+    width: 45px !important;
+    height: 45px !important;
+  }
+
+  .table tbody td:nth-child(2) {
+    font-size: 13px;
+  }
+
+  .table tbody td:nth-child(3) {
+    font-size: 13px;
+  }
+}

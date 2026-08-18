@@ -1,9 +1,12 @@
 import { useParams,Link} from "react-router-dom";
 import { donneesLocales } from "../data";
+//import "./details.css"
 
 export function Details(props){
     const {id} =useParams();
-    const produit = donneesLocales.find((prod) => prod.id === Number(id))
+    //const produit = donneesLocales.find((prod) => prod.id === Number(id))
+    const produits = donneesLocales();
+    const produit = produits.find(produit => produit.id === Number(id));
     return(
         <div style={{
     display: "flex",
